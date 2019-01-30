@@ -144,11 +144,18 @@ namespace Prerender.io
 				// http://test.com/MyApp/?_escape_=/somewhere
 				url = url.Replace(request.ApplicationPath, string.Empty);
 			}
- 
+
+            var appendUrl = "";
+
+            if (ShouldAddMobileParameter(request))
+            {
+                appendUrl = url.IndexOf("?") >= 0 ? "&mobile=1" : "?mobile=1";
+            }
+
             var prerenderServiceUrl = _prerenderConfig.PrerenderServiceUrl;
             return prerenderServiceUrl.EndsWith("/")
-                ? (prerenderServiceUrl + url)
-                : string.Format("{0}/{1}", prerenderServiceUrl, url);
+                ? (prerenderServiceUrl + url + appendUrl)
+                : string.Format("{0}/{1}{2}", prerenderServiceUrl, url, appendUrl);
         }
 	
 	public static string RemoveQueryStringByKey(string url, string key)
@@ -178,10 +185,6 @@ namespace Prerender.io
 
             var blacklist = _prerenderConfig.Blacklist;
             if (blacklist != null && IsInBlackList(url, referer, blacklist))
-
-
-
-
             {
                 return false;
             }
@@ -274,6 +277,11 @@ namespace Prerender.io
                 crawlerUserAgents.AddRange(_prerenderConfig.CrawlerUserAgents);
             }
             return crawlerUserAgents;
+        }
+
+        private bool ShouldAddMobileParameter(HttpRequest request)
+        {
+            return request.UserAgent.IndexOf("mobile", StringComparison.InvariantCultureIgnoreCase) >= 0;
         }
 
         private bool HasEscapedFragment(HttpRequest request)

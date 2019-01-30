@@ -3,9 +3,9 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
 [assembly: AssemblyTitle("Prerender.io")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Prerender middleware (na-kd fork)")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("greengerong")]
 [assembly: AssemblyProduct("Prerender.io")]
 [assembly: AssemblyCopyright("Copyright © 2014")]
 [assembly: AssemblyTrademark("")]

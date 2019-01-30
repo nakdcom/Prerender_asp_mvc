@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>$id$</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>greengerong</authors>
+    <owners>$author$</owners>
+    <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>https://github.com/nakdcom/Prerender_asp_mvc</projectUrl>
+    <iconUrl>https://github.com/nakdcom/Prerender_asp_mvc</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Prerender middleware (na-kd fork)</description>
+    <releaseNotes></releaseNotes>
+    <copyright>Copyright 2019</copyright>
+    <tags></tags>
+  </metadata>
+</package>
