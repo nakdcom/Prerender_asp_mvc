@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Configuration;
 
-namespace Prerender.io
+namespace NaKd.Prerender.io
 {
     public sealed class PrerenderConfigSection : ConfigurationSection
     {

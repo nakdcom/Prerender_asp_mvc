@@ -9,7 +9,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Web;
 
-namespace Prerender.io
+namespace NaKd.Prerender.io
 {
     public class PrerenderModule : IHttpModule
     {
