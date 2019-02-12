@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaKd.Prerender.io", "Prerender.io\NaKd.Prerender.io.csproj", "{EF621345-0520-4F7A-80F4-2C04EEAF2D44}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaKd.Prerender.io", "NaKd.Prerender.io\NaKd.Prerender.io.csproj", "{EF621345-0520-4F7A-80F4-2C04EEAF2D44}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
