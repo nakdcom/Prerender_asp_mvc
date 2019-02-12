@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Configuration;
 
-namespace Prerender.io
+namespace NaKd.Prerender.io
 {
     public class ProxyConfigElement : ConfigurationElement
     {

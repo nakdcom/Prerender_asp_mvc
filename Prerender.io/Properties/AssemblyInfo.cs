@@ -2,11 +2,11 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("Prerender.io")]
+[assembly: AssemblyTitle("NaKd.Prerender.io")]
 [assembly: AssemblyDescription("Prerender middleware (na-kd fork)")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("greengerong")]
-[assembly: AssemblyProduct("Prerender.io")]
+[assembly: AssemblyProduct("NaKd.Prerender.io")]
 [assembly: AssemblyCopyright("Copyright © 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -15,5 +15,5 @@ using System.Runtime.InteropServices;
 
 [assembly: Guid("fee09175-4250-430a-bef0-96eb1f5165ea")]
 
-[assembly: AssemblyVersion("1.0.0.2")]
-[assembly: AssemblyFileVersion("1.0.0.2")]
+[assembly: AssemblyVersion("1.0.0.3")]
+[assembly: AssemblyFileVersion("1.0.0.3")]

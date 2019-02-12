@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 
-namespace Prerender.io
+namespace NaKd.Prerender.io
 {
     public static class Utils
     {
