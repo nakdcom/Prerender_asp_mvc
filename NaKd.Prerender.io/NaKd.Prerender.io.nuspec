@@ -6,7 +6,6 @@
     <title>$title$</title>
     <authors>greengerong</authors>
     <owners>$author$</owners>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://opensource.org/licenses/MIT</licenseUrl>
     <projectUrl>https://github.com/nakdcom/Prerender_asp_mvc</projectUrl>
     <iconUrl>https://github.com/nakdcom/Prerender_asp_mvc</iconUrl>
