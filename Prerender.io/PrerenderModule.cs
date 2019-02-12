@@ -145,11 +145,11 @@ namespace Prerender.io
 				url = url.Replace(request.ApplicationPath, string.Empty);
 			}
 
-            var appendUrl = "";
+            var appendUrl = url.IndexOf("?") >= 0 ? "&ssr=on" : "?ssr=on";
 
             if (ShouldAddMobileParameter(request))
             {
-                appendUrl = url.IndexOf("?") >= 0 ? "&mobile=1" : "?mobile=1";
+                appendUrl = url.IndexOf("?") >= 0 ? "&mobile=1&ssr=on" : "?mobile=1&ssr=on";
             }
 
             var prerenderServiceUrl = _prerenderConfig.PrerenderServiceUrl;
