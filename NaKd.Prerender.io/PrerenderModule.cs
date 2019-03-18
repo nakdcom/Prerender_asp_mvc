@@ -145,6 +145,8 @@ namespace NaKd.Prerender.io
 				url = url.Replace(request.ApplicationPath, string.Empty);
 			}
 
+            url = RemoveUtmQueryStrings(url);
+
             var appendUrl = url.IndexOf("?") >= 0 ? "&ssr=on" : "?ssr=on";
 
             if (ShouldAddMobileParameter(request))
@@ -157,8 +159,29 @@ namespace NaKd.Prerender.io
                 ? (prerenderServiceUrl + url + appendUrl)
                 : string.Format("{0}/{1}{2}", prerenderServiceUrl, url, appendUrl);
         }
+
+        public static string RemoveUtmQueryStrings(string url)
+        {
+            var newUrl = url;
+            MatchCollection matches = Regex.Matches(url, "(?!&)utm_[^=]*");
+
+            if(matches.Count == 0)
+            {
+                return url;
+            }
+
+            foreach (Match match in matches)
+            {
+                foreach (Capture capture in match.Captures)
+                {
+                    newUrl = RemoveQueryStringByKey(newUrl, capture.Value);
+                }
+            }
+
+            return newUrl;
+        }
 	
-	public static string RemoveQueryStringByKey(string url, string key)
+	    public static string RemoveQueryStringByKey(string url, string key)
         {
             var uri = new Uri(url);
 
