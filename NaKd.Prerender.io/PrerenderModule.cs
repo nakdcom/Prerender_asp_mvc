@@ -146,11 +146,12 @@ namespace NaKd.Prerender.io
 			}
 
             url = RemoveUtmQueryStrings(url);
-
+            url = RemoveQueryStringByKey(url, "ssr");
             var appendUrl = url.IndexOf("?") >= 0 ? "&ssr=on" : "?ssr=on";
 
             if (ShouldAddMobileParameter(request))
             {
+                url = RemoveQueryStringByKey(url, "mobile");
                 appendUrl = url.IndexOf("?") >= 0 ? "&mobile=1&ssr=on" : "?mobile=1&ssr=on";
             }
 
